@@ -1,0 +1,45 @@
+body { 
+  font-family: 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Calibri';
+}
+
+.remark-slide-scaler {
+  box-shadow: 0 0 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+h1 {
+  background-color: #aededd;
+  padding: 0.3em;
+  margin: 0;
+}
+
+.remark-container {
+  background: black;
+}
+
+.remark-code, .remark-inline-code {
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: normal; 
+  font-family: monospace; 
+}
+
+a {
+  color: #0aaba4;
+}
+
+a:hover, a:visited:hover {
+  color: #0ee7de;
+}
+
+a:visited {
+  color: #0a847f;
+}
+
+img {
+  max-width: 800px;
+  max-height: 450px;
+}
