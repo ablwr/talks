@@ -4,7 +4,6 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2018 
 
-- NEA/ART: [TODO: Web Archiving Talk](2018-03-23-nea-art-web-archiving.html)
 - National Forum on Ethics and Archiving the Web: [TODO: Web Archiving Talk](2018-03-22-rhizome-web-archiving.html)
 - Code4lib [Beyond Open Data](http://2018.code4lib.org/talks/beyond-open-data) | [repo](https://github.com/saverkamp/beyond-open-data)
 
@@ -16,7 +15,7 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2016
 
-- iPRES: [Status of CELLAR: Update from an IETF Working Group for Matroska and FFV1](https://ipr16.organizers-congress.org/frontend/index.php?page_id=1151&v=List&do=0&day=52) | [slides](https://docs.google.com/presentation/d/1i31RE5pQM0SHm8Y_OYm9mt9RtH-OVmvjRjVayDr7vzw/edit?usp=sharing) | [whitepaper](img/blewer_rice_ipres_status_of_cellar.pdf) 
+- iPRES: [Status of CELLAR: Update from an IETF Working Group for Matroska and FFV1](https://ipr16.organizers-congress.org/frontend/index.php?page_id=1151&v=List&do=0&day=52) | [slides](https://docs.google.com/presentation/d/1i31RE5pQM0SHm8Y_OYm9mt9RtH-OVmvjRjVayDr7vzw/edit?usp=sharing) | [whitepaper](http://ashleyblewer.com/img/blewer_rice_ipres_status_of_cellar.pdf) 
 - Northeast Historic Film: Buying Lobster Rolls With Linden Dollars: Virtual Tourism and Digital Visions of New England in Second Life and Beyond | [slides](https://docs.google.com/presentation/d/132MQalXuO1Yn3xLuw29i1apN1K80TixgXZWMhMkf7cs/edit#slide=id.g11599e9a64_0_7) | [video](https://vimeo.com/174605137) 
 - Code4lib: Free your workflows (and the rest will follow): community-driven AV solutions through open source workflow development | [slides](http://ablwr.github.io/free_your_workflows/#/) | [video](https://www.youtube.com/watch?v=pSlJr8L8dpA&feature=youtu.be&t=53m50s)
 
