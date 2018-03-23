@@ -4,7 +4,7 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2018 
 
-- National Forum on Ethics and Archiving the Web: Fidelity, Integrity, & Compromise [Slides](talks/2018-03-23-ethics-archiving-web.key) (keynote)
+- National Forum on Ethics and Archiving the Web: Fidelity, Integrity, & Compromise | [Slides](talks/2018-03-23-ethics-archiving-web.key) (Keynote) | [Transcript](talks/2018-03-23-ethics-archiving-web.md)
 - Code4lib [Beyond Open Data](http://2018.code4lib.org/talks/beyond-open-data) | [repo](https://github.com/saverkamp/beyond-open-data)
 
 # 2017 
