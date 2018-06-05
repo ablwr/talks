@@ -65,7 +65,7 @@ bits.ashleyblewer.com/talks
 ---
 # checksums
 
-`find . -type f -exe md5 {} > CHECKSUM_REPORT_HERE.csv`
+`find . -type f -exec md5 {} \; > CHECKSUM_REPORT_HERE.csv`
 
 ---
 # FFMpeg 
