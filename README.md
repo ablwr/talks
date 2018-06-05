@@ -3,6 +3,7 @@
 Repository containing all talks I have given, with links to related materials. From 2018 onward, some talks are hosted here in this repo. 
 
 # 2018 
+- WGBH AAPB Public Broadcasting Preservation Fellowship | [slides](talks/2018-06-04-aapb-pbpf.html)
 - Recurse Center: Internet Girlfriend Club! | [slides](talks/2018-05-07-internet-girlfriend-club.html)
 - IS&T ARCH2018 | “Digital Audiovisual File Formats: Identification, Validation, Specification Verification” [slides](talks/2018-04-17-arch2018-formats-standards-validation.html)  
 - National Forum on Ethics and Archiving the Web: Fidelity, Integrity, & Compromise | [slides](talks/2018-03-23-ethics-archiving-web.key) (Keynote) | [transcript](talks/2018-03-23-ethics-archiving-web.md) | [video (1:32:00)](https://livestream.com/newmuseum/EAWRhizomeSession5/videos/172190125)
