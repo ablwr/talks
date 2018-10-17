@@ -4,6 +4,7 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2018 
 
+- DLF Forum: Open Options for Audiovisual Preservation | [slides](https://docs.google.com/presentation/d/1ddQniWhajbqwEpG1F4YS7Q6533mQVlDxVtWxg-diP5g/edit#slide=id.p) | [notes](https://docs.google.com/document/d/1Ug_WsXYLqQRMVeYT6LIcXpVLhQivuBMbkmOVywbMkZ0/edit)
 - NDSA Content Group Meeting: AV Preservation | [video](https://youtu.be/R9o3z-sFSb4) | [slides](talks/2018-09-05-ndsa-content-interest-group-avpres.html)
 - WGBH AAPB Public Broadcasting Preservation Fellowship: Workshop | [slides](talks/2018-06-04-aapb-pbpf.html)
 - Recurse Center: Internet Girlfriend Club! | [slides](talks/2018-05-07-internet-girlfriend-club.html)
