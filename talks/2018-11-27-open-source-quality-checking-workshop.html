@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" charset="utf-8" content="text/html, width=device-width, initial-scale=1">
+    <title>Open Source Quality Checking Workshop</title>
+    <meta charset="utf-8">
+<!--     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" /> -->
+    <link rel="stylesheet" href="../assets/css.css">
+  </head>
+  <body>
+    <textarea id="source">
+class: middle    
+
+# Open Source Quality Checking Workshop
+
+---
+# Introduction
+
+- Ashley Blewer
+- Jérôme Martinez
+- You!
+
+---
+# High-level Outline
+
+- Quality Control
+- A/V-specific issues
+- Tools
+
+---
+# Timeline
+
+...
+
+---
+class: middle    
+
+# Section 1: Quality Control
+
+---
+# Outline 
+
+- Overview of open source software
+- Overview of quality control
+- Technical specifications
+- Standards process
+- File validation nuances
+
+
+- Overview of unique characteristics and primary challenges in digital audiovisual preservation
+
+- How are file formats made?
+- What is a standards process and technical specification and why does it matter?
+  - Identifying file composition: how are video files made? 
+  - Identifying and manipulating file format and codec complexities: how are audiovisual files structured? How can you discriminate among the many possible options? What are downstream workflow implications?
+  - Distinguishing file validation nuances: how to tell what part of a file is the problem? What are some potential solutions?
+
+---
+class: middle    
+
+# Section 2: A/V Specific Issues
+
+---
+# Outline 
+
+- File formats and types
+- Standards, validation, and technical specifications
+- What is a file format, how are they similar/different?
+
+---
+# File formats and types
+
+- What is a file format, how are they similar/different?
+- How are file formats made?
+
+---
+# What is Video?
+
+- Streams 
+- Container 
+- Codecs 
+- Colorspaces 
+- Color bars 
+- Compression
+- Chroma subsampling
+- Television display
+- Pixels 
+- Bit depth / Color depth
+- Pixel width  
+- Resolutions 
+- Frame rates 
+- Aspect ratios 
+- Interlacing 
+- Timecodes  
+- 3D and beyond
+
+---
+# Streams 🌊🌊🌊
+
+Video is made up of streams,
+wrapped in a container,
+and some of those streams are encoded with a codec
+
+---
+# Containers 
+
+Containers hold the contents of a video file together. They also are responsible for identifying the data, how much of the data there is, what kind of data streams there are, time information, self-identification, and metadata about itself and its contents.
+
+Containers also establish the appropriate file extension for the file.
+
+A video file can only have one container but can (and probably do) contain multiple codecs.
+
+[Full list supported by FFmpeg](https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-Features)
+
+---
+# Some popular containers (video)
+
+- AVI 
+- Matroska (.mkv, .mk3d, .mka, .mks, .webm)
+- MP4 
+- MXF 
+- Ogg 
+- Quicktime (.mov, .qt)
+
+---
+# Some popular containers (audio)
+
+- AAC 
+- AIFF
+- FLAC 
+- MP3 
+- Ogg 
+- WAV
+
+---
+# Codecs
+
+A codec encodes and decodes a data stream or a signal for transmission and storage. Within the context of video, that data stream can be video or audio.
+
+[Full list supported by FFmpeg](https://www.ffmpeg.org/general.html#Supported-File-Formats_002c-Codecs-or-Features)
+
+---
+# Some popular codecs (video)
+
+- AV1
+- Daala 
+- Dirac
+- DV
+- GIF 😎
+- HuffYUV
+- JPEG2000 📟
+- FFV1 
+- ProRes 
+- VP8 (4:2:0 8-bit)
+- v210 (Uncompressed 4:2:2 10-bit)
+- x264
+- x265
+
+---
+# Some popular codecs (audio)
+
+You'll see some repeats from the containers section. 
+
+- AAC 
+- FLAC 
+- PCM (Uncompressed)
+- MP3 
+- Ogg 
+- Opus
+
+---
+# Both?
+
+I know, sometimes it can get confusing because the wrapper and the codec have the same name. Sometimes it's because they can only be used with each other.
+
+For example, the Windows Media Player container can only contain the Windows Media Player codec. They are tied together in that way.
+
+Other containers, especially open ones, do not care about the bitstream inside (or they care... less).
+
+---
+# Streams
+
+- General/metadata
+- Video
+- Audio
+- Subtitles/text
+- Chapters
+
+The extent and availability of the above is contingent on the parameters of the container in use.  
+
+---
+# Colorspaces
+
+How is color organized, translated, conveyed, and presented?  
+
+- RGB 
+- YUV  
+- YCbCr 
+- YCoCg
+- and more
+
+---
+# RGB 
+
+Red, Green, Blue, like most modern computer monitors.
+ 
+---
+# YUV 
+
+- Y = luma (brightness)
+- U and V = chrominance (color)
+
+U and V are **red-difference** and **blue-difference**
+
+Sometimes people say YUV when they actually mean something else:
+
+---
+# YCbCr / YPbPr
+
+- Y = luma (brightness)
+- Cb and Cr = chrominance (color)
+
+Cb and Cr are **blue-difference** and **red-difference**
+
+YPbPr: Analog components... kindaaaaa
+
+---
+# YCoCg 
+
+- Y = luma (brightness)
+- Co and Cg = chrominance (color)
+
+Co and Cg re **orange-difference** and **green-difference**
+
+---
+# Color bars 
+
+Let's look at the SMPTE color bars:
+
+.center[![mediainfo](../assets/img/smpte.png)]
+
+What does this do? Yeah, it checks your colors and makes sure they look good! But how does it do that?
+
+---
+# Color bars 
+
+Top part: Different colors (white, primary, and secondary colors) set at 75% saturation (Why 75%? Because 100% would be too much and may cause clipping). 
+Middle row: "Reverse bars"  
+Bottom left: Subcarrier frequency at -/ phase, white, subcarrier frequency at +Q phase  
+Bottom right: "PLUGE" element.
+
+.center[![mediainfo](../assets/img/smpte.png)]
+
+---
+# Color bars 
+
+Reverse bars?  
+- If display is set to "blue-only", reverse bars should be the identical color as above bars. Saturation can be checked this way.
+
+Subcarrier frequency?  
+- the wavelength frequency at which the video is set to stream
+
+PLUGE?  
+- "Picture Line-Up Generating Equipment"
+- Reference black, one slightly more negative, and one slightly more positive
+
+---
+# Compression 
+
+- Uncompressed: Data stream with no attempts to decrease size
+- Compressed: Data is smushed in some way 
+- Losslessly compressed: Data is smushed in some way, but can be un-smushed  
+- Lossily Compressed: Data is smushed and this cannot be undone 
+
+---
+# Chroma subsampling 
+
+A thing we do because human eyes can't really see color that well. Chroma subsampling is "the practice of encoding images by implementing less resolution for chroma information than for luma information."
+
+Some common ones for preservation (because we want the best): 
+- 4:4:4 (not actually subsampling)
+- 4:2:2 (this is broadcast standard)
+- 4:2:0 (also common in production)
+
+Remember that in video, chroma is in both the Cb and Cr channels so each get subsampled.
+
+---
+# Chroma subsampling, explained 
+
+What do these numbers mean? 
+
+x:y:z  
+x = width (horizontal) of sample size  
+y = number of chroma samples in the first row  
+z = number of chroma samples in the second row   
+
+---
+# Chroma subsampling, explained 
+
+⬛️ = checked pixel  
+⬜️ = ignored pixel  
+
+- 4:4:4 is full chroma and not subsampling at all because everything is being sampled.  
+⬛️ ⬛️ ⬛️ ⬛️  
+⬛️ ⬛️ ⬛️ ⬛️  
+
+- 4:2:2 is checking every other pixel horizontally and vertically  
+⬛️ ⬜️ ⬛️ ⬜️  
+⬛️ ⬜️ ⬛️ ⬜️ 
+
+- 4:2:0 is checking every other pixel horizontally but not vertically   
+⬛️ ⬜️ ⬛️ ⬜️  
+⬜️ ⬜️ ⬜️ ⬜️  
+
+???
+
+This is, of course, a simplification. Some algorithms (JPG?) don't just sample the first pixel, but sample both together and take the average results. So it's smarter than as basically outlined above.
+
+---
+# Standards 
+
+- What is a technical standards process?
+- What is the standardization process?
+- What is a technical specification
+- Why does it matter?
+
+---
+# Standards bodies 
+
+- SMPTE 
+- IETF 
+- ISO
+
+---
+# Television display systems 
+
+Good news, there are only three systems: 
+
+- NTSC 
+- PAL 
+- SECAM 
+
+Bad news, they are completely incompatible with each other.
+
+---
+# NTSC 
+
+*National Television Standards Committee*  
+
+Developed in the USA in 1954.
+
+- Lines: 525
+- Frame rate: 29.97 Hz
+- Picture resolutions: 720x480; 704x480; 352x480; 352x240
+
+---
+# PAL 
+
+*Phase Alternating Line*
+
+Developed in 1967 by the United Kingdom & Germany.
+
+- Lines: 625
+- Frame rate: 25 Hz
+- Picture resolution: 720x576; 704x576; 352x576; 352x288
+
+---
+# SECAM 
+
+*Séquentiel couleur à mémoire* ("Sequential colour with memory")
+
+Developed in France in 1967. 
+
+SECAM uses the same bandwidth and resolution (720x576) as PAL but transmits color differently.
+
+---
+class: middle, center
+
+# Pixels 
+
+---
+# Bit depth / Color depth
+
+Pixel bit depth refers to color depth for each pixel, the amount of color information stored (as bits) in each and every pixel on screen.  
+
+For perspective, 1-bit will have just two colors. Each pixel will have to answer a yes/no question for "Am I like this color?" and there is only one color to ask about. 2-bit allows for four colors.
+
+8 bit = 256 colors  
+10 bit = 1024 colors   
+16 bit = 4,096 colors  
+32 bit = 4,294,967,296 colors  
+
+
+---
+# Bit depth / Color depth
+
+256 colors isn't very much. But video comes in as three components -- YCbCr or RGB, so it is running the bit depth over one pixel three times.
+
+So when it's per channel, it means 8bit is 256x256x256
+
+10bit is 1024x1024x1024.
+
+Both of these numbers equate to way more colors than humans are capable of perceiving.
+
+---
+# Pixel Aspect Ratio
+
+- PAR  
+  The horizontal to vertical ratio of each, rectangular, physical pixel
+- SAR  
+  The horizontal to vertical ratio of solely the number of pixels in each direction
+- DAR  
+  The combination (which occurs by multiplication) of both the pixel aspect ratio and storage aspect ratio giving the aspect ratio as experienced by the viewer.
+
+---
+# Frame rates 
+
+How fast do things go? 
+
+- Pre-video rates
+- 24
+- 25 
+- 29.97
+- 48 
+- and more 
+
+---
+# Aspect ratios 
+
+- 4:3 (1.33:1) 	  SD
+- 16:9 (1.77:1) 	HD
+- 21:9 (2.35:1) 	Movies
+- 19:10 (1.9:1) 	IMAX
+- and more
+
+Practice: [Beyonce game](https://ablwr.github.io/beyonce_quiz/)  
+
+---
+# Interlacing 
+
+Interlacing is for optimizing perceived motion in lossy video. 
+
+---
+# TFF, BFF 
+
+When interlacing, every other line is skipped. Which gets skipped depends on if the Scan Order is set to TFF or BFF. 
+
+TFF = Top Field First (TFF)  
+BFF = Bottom Field First (BFF)  
+
+---
+# De-interlacing 
+
+MBAFF	Macroblock-Level Adaptive Frame/Field 
+PAFF Picture Adaptive Frame Field
+
+
+* PAFF allows to decide, on a frame basis, whether to encode each frame as a frame or as two fields. When encoded as two fields, it's as if you would have done a separatefields() on the frame.
+* MBAFF allows to decide, on a macroblock basis, whether to encode as field or frame. Actually, it works on vertical pairs of macroblocks, so on 16x32 areas. You can easily put two frame macroblocks ( on under the other ), or two field ones ( one with the top lines, the other with the bottom lines ).  
+
+[source](http://forum.doom9.org/showthread.php?p=927647) 
+
+---
+# Timecodes 
+
+Timecodes assign a number to each frame.
+
+BCD: Binary Coded Decimal (HH:MM:SS:FF)
+
+BITC: Burnt-In Time Code  
+LTC: Linear Timecode  
+VITC: Vertical Interval Time Code  
+
+---
+# 3D and beyond?
+
+- 3D 
+- 360 video 
+- Virtual reality
+- all of the above???
+
+---
+# Standards 
+
+These are some of the standards that we have to work with (and sometimes work around)!  
+
+All of these standards make up the significant properties of video files and we have to abide by them and maintain them when we digitize or normalize.
+
+---
+# Technical specifications
+
+- Open vs closed
+- pros/cons for each
+- Open: anyone can use, improve
+- Closed: sometimes work is paid for? (but this is also typically true with open standards)
+
+---
+# What does this work look like? 
+
+
+[https://github.com/Matroska-Org/ebml-specification/blob/master/specification.markdown](https://github.com/Matroska-Org/ebml-specification/blob/master/specification.markdown
+)  
+
+[https://github.com/Matroska-Org/matroska-specification](https://github.com/Matroska-Org/matroska-specification)  
+
+[https://xiph.org/flac/format.html](https://xiph.org/flac/format.html)  
+
+
+---
+# Validation 
+
+So because of all of this, we can and should perform validation as a preservation practice:
+
+- at acquisition
+- when moving files
+- upon ingest into preservation system
+- regular checkups
+
+---
+# Up next: tools!
+
+- QCTools 
+- MediaInfo, MediaTrace, MediaConch 
+- RAWCooked
+
+---
+# Other tools: 
+
+-  HexFiend
+-  JHOVE
+-  DROID
+-  Siegried
+-  fido
+-  Exiftool
+-  DV Analyzer
+-  all the MetaEdits (BWF, MOV, AVI)
+-  Atom Inspector
+-  Dumpster
+
+---
+# Section 3: Tools
+
+- Overview
+- QCTools 
+- MediaInfo, MediaTrace, MediaConch 
+- RAWCooked
+
+---
+# How to find/choose the right tool?
+
+---
+# QCTools 
+
+- BAVC’s QCTools GUI installation: https://bavc.org/preserve-media/preservation-tools
+- http://training.ashleyblewer.com/presentations/qctools.html#1
+
+---
+# MediaInfo 
+
+- http://training.ashleyblewer.com/presentations/mediainfo#1
+- MediaInfo, browser-based GUI: https://mediaarea.net/MediaInfoOnline
+
+---
+# MediaConch 
+
+- http://training.ashleyblewer.com/presentations/mediaconch.html#1
+- MediaConch, browser-based GUI: https://mediaarea.net/MediaConchOnline/
+
+---
+# RAWcooked
+
+https://mediaarea.net/RAWcooked
+
+
+    </textarea>
+    <script src="../assets/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({ ratio: '16:9'});
+    </script>
+  </body>
+</html>
