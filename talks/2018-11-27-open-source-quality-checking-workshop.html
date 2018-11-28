@@ -11,33 +11,34 @@
     <textarea id="source">
 class: middle    
 
+# MediaArea and CNA present... 
+.center[![](../assets/img/luxembourg.jpg)]
 # Open Source Quality Checking Workshop
-
 ---
 # Introduction
 
 - Ashley Blewer
 - Jérôme Martinez
+- MediaArea
+- Centre national de l'audiovisuel Luxembourg
 - You!
+
+.center[![](../assets/img/luxembourg.jpg)]
 
 ---
 # High-level Outline
 
-- Quality Control
-- A/V-specific issues
-- Tools
+## Quality Control
+## A/V-specific issues
+## Tools!
 
 ---
-# Timeline
+# Chronologie
 
-- 9-9:30 Breakfast, arrival
-- 9:30-10 Introductions
-- 10-12:30 Quality control, Video
-- 12:30-1:30 Lunch
-- 1:30-2:30 A/V Issues
-- 1:30-5:00 - Tools
-
-Tomorrow: Hands-on tools
+- 9-9:30 Petit-déjeuner, arrivée, introductions
+- 9:30-12:30 Quality control, A/V Issues, Video
+- 12:30-1:30 Déjeuner
+- 1:30-5:00 Tools demo and practice
 
 ---
 class: middle    
@@ -171,9 +172,16 @@ class: middle
 ---
 # Outline 
 
+- Issues
+- What is video?
 - File formats and types
 - Standards, validation, and technical specifications
 - What is a file format, how are they similar/different?
+
+---
+# Issues in A/V Preservation
+
+Switching to [A/V Issues slidedeck](https://training.ashleyblewer.com/presentations/issues.html#1)
 
 ---
 # File formats and types
@@ -350,29 +358,6 @@ Let's look at the SMPTE color bars:
 What does this do? Yeah, it checks your colors and makes sure they look good! But how does it do that?
 
 ---
-# Color bars 
-
-Top part: Different colors (white, primary, and secondary colors) set at 75% saturation (Why 75%? Because 100% would be too much and may cause clipping). 
-Middle row: "Reverse bars"  
-Bottom left: Subcarrier frequency at -/ phase, white, subcarrier frequency at +Q phase  
-Bottom right: "PLUGE" element.
-
-.center[![mediainfo](../assets/img/smpte.png)]
-
----
-# Color bars 
-
-Reverse bars?  
-- If display is set to "blue-only", reverse bars should be the identical color as above bars. Saturation can be checked this way.
-
-Subcarrier frequency?  
-- the wavelength frequency at which the video is set to stream
-
-PLUGE?  
-- "Picture Line-Up Generating Equipment"
-- Reference black, one slightly more negative, and one slightly more positive
-
----
 # Compression 
 
 - Uncompressed: Data stream with no attempts to decrease size
@@ -497,7 +482,6 @@ For perspective, 1-bit will have just two colors. Each pixel will have to answer
 10 bit = 1024 colors   
 16 bit = 4,096 colors  
 32 bit = 4,294,967,296 colors  
-
 
 ---
 # Bit depth / Color depth
