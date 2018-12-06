@@ -4,7 +4,7 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2018 
 
-- 2018-11-30 CNA & Technoport Luxembourg ["Hack Your Heritage"](http://www.cnadigital.lu/hackathon): Working in open source... in cultural heritage | [slides](talks/2018-11-30-open-source-cultural-heritage.html) 
+- 2018-11-30 CNA & Technoport Luxembourg ["Hack Your Heritage"](http://www.cnadigital.lu/hackathon): Working in open source... in cultural heritage | [video](https://vimeo.com/303734596) | [slides](talks/2018-11-30-open-source-cultural-heritage.html) 
 - 2018-11-27 Centre national de l'audiovisuel Luxembourg and MediaArea: Open Source Quality Checking Workshop | [video]( https://www.youtube.com/watch?v=qT7NP1-ONro) | [slides](talks/2018-11-27-open-source-quality-checking-workshop.html) | [website](https://mediaarea.net/QCWorkshop2018)
 - 2018-10-26 No Time To Wait! 3: The Developer-Archivist: a Definition of the Profession | [video](https://youtu.be/BOTwj7qmMOU?t=9898) | [website](https://mediaarea.net/NoTimeToWait3)
 - 2018-10-17 DLF Forum: Open Options for Audiovisual Preservation | [OSF](https://osf.io/snyfd/) | [slides](https://docs.google.com/presentation/d/1ddQniWhajbqwEpG1F4YS7Q6533mQVlDxVtWxg-diP5g/edit#slide=id.p) | [notes](https://docs.google.com/document/d/1Ug_WsXYLqQRMVeYT6LIcXpVLhQivuBMbkmOVywbMkZ0/edit)
