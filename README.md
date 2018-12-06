@@ -24,10 +24,13 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2016
 
+- 2016-10-17 USC SLIS 777 Guest Lecture | [video/transcript](https://ablwr.github.io/slis777/)
+- 2016-10-14 iPRES: Quality Standards for Preserving Digital Cultural Heritage | [website](https://ipr16.organizers-congress.org/frontend/index.php?page_id=1151&v=List&do=0&day=54)
 - 2016-10-03 iPRES: [Status of CELLAR: Update from an IETF Working Group for Matroska and FFV1](https://ipr16.organizers-congress.org/frontend/index.php?page_id=1151&v=List&do=0&day=52) | [slides](https://docs.google.com/presentation/d/1i31RE5pQM0SHm8Y_OYm9mt9RtH-OVmvjRjVayDr7vzw/edit?usp=sharing) | [whitepaper](http://ashleyblewer.com/img/blewer_rice_ipres_status_of_cellar.pdf) 
 - 2016-07-23 Northeast Historic Film: Buying Lobster Rolls With Linden Dollars: Virtual Tourism and Digital Visions of New England in Second Life and Beyond | [slides](https://docs.google.com/presentation/d/132MQalXuO1Yn3xLuw29i1apN1K80TixgXZWMhMkf7cs/edit#slide=id.g11599e9a64_0_7) | [video](https://vimeo.com/174605137) 
 - 2016-07-23 Tate: Conservation of Digital Video Workshop | [website](http://pericles-project.eu/blog/post/TateWorkshop2016)
 - 2016-07-18 No Time To Wait! | [website](https://mediaarea.net/NoTimeToWait1)
+- 2016-04-03 NYU MIAP: XSLT Workshop | [slides](https://github.com/ablwr/xslt_miap_2016)
 - 2016-03-10 Code4lib: Free your workflows (and the rest will follow): community-driven AV solutions through open source workflow development | [slides](http://ablwr.github.io/free_your_workflows/#/) | [video](https://www.youtube.com/watch?v=pSlJr8L8dpA&feature=youtu.be&t=53m50s)
 
 # 2015 and earlier
@@ -43,6 +46,8 @@ Repository containing all talks I have given, with links to related materials. F
 - Flatiron School Presents (Meetup): Form Helpers | [slides](https://docs.google.com/presentation/d/1pNKOVcVwY1u5kLwck6VhDyiEvlB7gcynIRHPReTBu0E/edit#slide=id.p) 
 - Orphans Midwest: Un-Caging the Orphan | [slides](https://docs.google.com/presentation/d/11BU71iUH55LaZBu01u9pt_U3iWi-BTDfJNRBDiKFOus/edit#slide=id.p) 
 - Gender, Bodies, Tech: The Palace: Gender Fluidity in Flatland | [slides](https://docs.google.com/presentation/d/1-ACB_oHoPJEqOWbsGqjo5zLNMnV_wf_rYv1ZGCr7RFM/edit) 
+- USC Wordpress Website Workshop | [slides](https://docs.google.com/presentation/d/1n_KIBZMKXqiK8lwG4f5uANQAuvXBVxzn36Ifl8cVQSE/edit)
 - USC/WGST Symposium: Moving Image Research Collections, or "We have a film archive?" | [slides](https://docs.google.com/presentation/d/15StvzK6OEaElxOmn8tEwril8u5lzJ62EGYZamT2jar0/edit?usp=sharing) 
 - USC/WGST Symposium: Questions of Opulence: Perception of Women's Bodies Within Roaring Twenties Newsreels | [slides](https://docs.google.com/presentation/d/15StvzK6OEaElxOmn8tEwril8u5lzJ62EGYZamT2jar0/edit#slide=id.g2a01015e2_049) 
+- USC Moving Image Research Collections: Film Library Inspection Party (FLIP) | [video](https://vimeo.com/36563176)
 - [Growing Up Great](https://vimeo.com/77184438)
