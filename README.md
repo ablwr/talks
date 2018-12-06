@@ -10,9 +10,9 @@ Repository containing all talks I have given, with links to related materials. F
 - 2018-10-17 DLF Forum: Open Options for Audiovisual Preservation | [OSF](https://osf.io/snyfd/) | [slides](https://docs.google.com/presentation/d/1ddQniWhajbqwEpG1F4YS7Q6533mQVlDxVtWxg-diP5g/edit#slide=id.p) | [notes](https://docs.google.com/document/d/1Ug_WsXYLqQRMVeYT6LIcXpVLhQivuBMbkmOVywbMkZ0/edit)
 - 2018-10-16 DLF Forum: Approaches to A/V | [notes](https://docs.google.com/document/d/1wX95KanmaUXkHnLyw3EBTnvDYBdgWaPseqdHqenM6AQ/edit)
 - 2018-09-05 NDSA Content Group Meeting: AV Preservation | [video](https://youtu.be/R9o3z-sFSb4) | [slides](talks/2018-09-05-ndsa-content-interest-group-avpres.html)
-- 2018-06-04 WGBH AAPB Public Broadcasting Preservation Fellowship: Workshop | [slides](talks/2018-06-04-aapb-pbpf.html)
+- 2018-06-04 WGBH AAPB Public Broadcasting Preservation Fellowship: Tech Workshop | [slides](talks/2018-06-04-aapb-pbpf.html)
 - 2018-05-07 Recurse Center: Internet Girlfriend Club! | [slides](talks/2018-05-07-internet-girlfriend-club.html)
-- 2018-04-17 IS&T ARCH2018: "Digital Audiovisual File Formats: Identification, Validation, Specification Verification" | [slides](talks/2018-04-17-arch2018-formats-standards-validation.html)  
+- 2018-04-17 IS&T ARCH2018: "Digital Audiovisual File Formats: Identification, Validation, Specification Verification" Workshop | [slides](talks/2018-04-17-arch2018-formats-standards-validation.html)  
 - 2018-03-23 National Forum on Ethics and Archiving the Web: Fidelity, Integrity, & Compromise | [slides](talks/2018-03-23-ethics-archiving-web.key) (Keynote) | [transcript](talks/2018-03-23-ethics-archiving-web.md) | [video (1:32:00)](https://livestream.com/newmuseum/EAWRhizomeSession5/videos/172190125)
 - 2018-02-15 Code4lib [Beyond Open Data](http://2018.code4lib.org/talks/beyond-open-data) | [repo](https://github.com/saverkamp/beyond-open-data)
 
