@@ -2,8 +2,8 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2019
 
-- 2019-02-19 Code4lib: Forensic Files, Episode 1: "Fishing for the Truth" | [website](https://2019.code4lib.org/workshops/Forensic-Files-Episode-1-Fishing-for-the-Truth)
-- 2019-02-19 Code4lib: Forensic Files, Episode 2: "A Purr-fect Match" | [website](https://2019.code4lib.org/workshops/Forensic-Files-Episode-2-A-Purr-fect-Match)
+- 2019-02-19 Code4lib: Forensic Files, Episode 1: "Fishing for the Truth" | [slides](https://docs.google.com/presentation/d/11Ug8Z9BJ_sS-pQcdPmM96BMXBrpho2ASRp0pcZIIbpE) | [website](https://2019.code4lib.org/workshops/Forensic-Files-Episode-1-Fishing-for-the-Truth)
+- 2019-02-19 Code4lib: Forensic Files, Episode 2: "A Purr-fect Match" | [slides](https://docs.google.com/presentation/d/11Ug8Z9BJ_sS-pQcdPmM96BMXBrpho2ASRp0pcZIIbpE) | [website](https://2019.code4lib.org/workshops/Forensic-Files-Episode-2-A-Purr-fect-Match)
 
 # 2018 
 
