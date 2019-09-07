@@ -2,7 +2,7 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2019
 
-- 2019-08-06 Society of American Archivists: BloggERS presents: Script It! Developing Technical Literacy in the Archives: Git-keeping: The Many Technical Skills Beyond 'Learning to Code' | [slides, as pdf](talks/2019-08-06-gitkeeping.pdf) | [slides, as pptx (with speakernotes)](talks/2019-08-06-gitkeeping.pptx) | [blog post](https://saaers.wordpress.com/2018/12/11/trained-in-classification-without-classification/)
+- 2019-08-06 Society of American Archivists: BloggERS presents: Script It! Developing Technical Literacy in the Archives: Git-keeping: The Many Technical Skills Beyond 'Learning to Code' | [mp4](talks/script-it.mp4) | [slides, as pdf](talks/2019-08-06-gitkeeping.pdf) | [slides, as pptx (with speakernotes)](talks/2019-08-06-gitkeeping.pptx) | [blog post](https://saaers.wordpress.com/2018/12/11/trained-in-classification-without-classification/)
 - 2019-04-27 Bastard Film Encounter | [blog post](https://bits.ashleyblewer.com/blog/2019/04/20/rhondas-greatest-hits-bastard-film-encounter/)
 - 2019-02-21 Code4lib: The Real World of Technology | [video](https://www.youtube.com/watch?v=GDC7nxtdG3s&feature=youtu.be&t=1111) | [transcript++](https://bits.ashleyblewer.com/blog/2019/02/23/code4lib-2019-lightning-talk-real-world-of-technology/)
 - 2019-02-19 Code4lib: Forensic Files, Episode 1: "Fishing for the Truth" | [slides](https://docs.google.com/presentation/d/11Ug8Z9BJ_sS-pQcdPmM96BMXBrpho2ASRp0pcZIIbpE) | [website](https://2019.code4lib.org/workshops/Forensic-Files-Episode-1-Fishing-for-the-Truth)
