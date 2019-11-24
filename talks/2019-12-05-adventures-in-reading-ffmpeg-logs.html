@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" charset="utf-8" content="text/html, width=device-width, initial-scale=1">
+    <title>Adventures in reading FFmpeg logs ❥ ashley blewer</title>
+    <meta charset="utf-8">
+<!--     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" /> -->
+    <link rel="stylesheet" href="../assets/css.css">
+  </head>
+  <body>
+    <textarea id="source">
+class: middle    
+
+# Adventures in reading FFmpeg logs
+**Ashley Blewer**  
+No Time To Wait 4  
+December 5, 2019  
+Open Society Archives  
+Budapest, Hungary  
+---
+class: middle
+
+# Part 0: Introduction
+
+---
+# 👋 Hello
+
+.center[![](../assets/img/me-cartoon.jpg)]
+
+???
+I always like to provide some context as to where I am coming from, when giving a talk, especially at such an interdisciplinary conference
+such as this one. For this talk, I'm going to be speaking by way of my experience 1) as a researcher of early-2000s web-based artworks
+2) as an educator in technical concepts to non-experienced audiences, and 3) in my 
+capacity as a systems archivist at 
+Artefactul Systems, working on the Archivematica project. Although I am not representing Artefactual in this talk, it's just for context
+as to the work that I do, where I work with major art museums and Universities and archives that handle miscellaneous video materials.
+
+So I guess that is to say that this isn't my full-time job, but some of my jobs and hobbies have me interacting with weird files and
+helping others make decisions on what to do with them.
+---
+# Talk metadata
+
+.center[![](../assets/img/simpsons-watch-something-else.gif)]
+
+???
+As a brief point about this talk, I realize this talk is targetting an audience that is mostly new to working not just
+with FFmpeg, but on the command line, or in a technical capacity. Since I know there are FFmpeg developers in the 
+audience, I have supplemented my talk with cartoons, for entertainment.
+
+---
+# What is FFmpeg?
+
+- Please watch another talk
+
+.center[![](../assets/img/bart-shut-window.gif)]
+
+???
+First of all, what is FFmpeg? Sorry, please watch another talk.
+---
+class: middle
+
+# Part 1: Understanding Video
+
+???
+So we made it past part 0, now onto part 1, understanding video
+---
+# What is video?
+
+.center[![](../assets/img/homer-thinking.gif)]
+
+???
+What is video? Well, I don't think this question is as easy to answer.
+---
+# What is video?
+
+.center[![](../assets/img/simpsons-thinking.gif)]
+
+???
+Because video means a lot of different things to different people. 
+A single entity, an audiovisual format that is not film, a broadcast, 
+a VHS tape, electromagnetic waves flowing through the ether...
+
+---
+# What does FFmpeg think a video is?
+
+.center[![](../assets/img/homer-president.gif)]
+
+???
+For what I am describing in this talk, it's important to think about video in the same way FFmpeg thinks about video.
+
+---
+# Streams 🌊🌊🌊
+
+A video is made up of one or more streams:
+- video
+- audio
+- text
+- data
+.right[![](../assets/img/simpsons-tv.gif)]
+
+???
+So in this context, a video is made up of streams. Basically, video, audio, text, data
+---
+# FFmpeg follows this pattern
+- and you should too 
+
+.center[![](../assets/img/ffmpeg-transcoding.jpg)]
+
+source: `man ffmpeg` or [ffmpeg.org/ffmpeg.html](http://ffmpeg.org/ffmpeg.html#Detailed-description)
+
+???
+This image is going to come up a few more times
+
+FFmpeg follows this pattern, as outlined in the official docs. take one or more media object, split each into appropriate streams, split each of those into appropriate frames according to the encoding, put the frames back together in the new way, and put the streams back together.
+DEMUXING, DECODING, ENCODING, MUXING
+
+Demuxing, separating streams. Decoding, separating bits of a stream. Encoding, putting bits together again. Muxing, putting streams together again.
+
+Understanding this concept, alone, will help a lot in deciphering FFmpeg logs.
+---
+class: middle
+
+# Let's break things down
+
+.center[![](../assets/img/simpsons-learnding.gif)]
+
+???
+Let's break things down and go through an example
+
+---
+When things go well 
+
+<div style="white-space:pre;font-family:mono;font-size:10px;">
+ffmpeg -i /path/to/input.webm -vf "fps=10,scale=500:-1" -t 3 -loop 6 output.gif
+ffmpeg version 4.2.1 Copyright (c) 2000-2019 the FFmpeg developers
+built with gcc 5.5.0 (Homebrew gcc 5.5.0_4)
+configuration: --prefix=/home/linuxbrew/.linuxbrew/Cellar/ffmpeg/4.2.1_1 --enable-shared --enable-pthreads
+--enable-version3 --enable-avresample --cc=gcc-5 --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls
+--enable-gpl --enable-libaom --enable-libbluray --enable-libmp3lame --enable-libopus --enable-librubberband
+--enable-libsnappy --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvorbis --enable-libvpx
+--enable-libx264 --enable-libx265 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype
+--enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg
+--enable-librtmp --enable-libspeex --enable-libsoxr --disable-libjack --disable-indev=jack
+libavutil 56. 31.100 / 56. 31.100
+libavcodec 58. 54.100 / 58. 54.100
+libavformat 58. 29.100 / 58. 29.100
+libavdevice 58. 8.100 / 58. 8.100
+libavfilter 7. 57.100 / 7. 57.100
+libavresample 4. 0. 0 / 4. 0. 0
+libswscale 5. 5.100 / 5. 5.100
+libswresample 3. 5.100 / 3. 5.100
+libpostproc 55. 5.100 / 55. 5.100
+Input #0, matroska,webm, from '/path/to/input.webm':
+Metadata:
+encoder : GStreamer matroskamux version 1.14.5
+creation_time : 2019-11-06T20:48:13.000000Z
+Duration: 00:00:02.07, start: 0.000000, bitrate: 1229 kb/s
+Stream #0:0(eng): Video: vp8, yuv420p(progressive), 640x480, SAR 1:1 DAR 4:3, 30 fps, 30 tbr, 1k tbn, 1k tbc (default)
+Metadata:
+title : Video
+Stream #0:1(eng): Audio: vorbis, 44100 Hz, mono, fltp (default)
+Metadata:
+title : Audio
+Stream mapping:
+Stream #0:0 -> #0:0 (vp8 (native) -> gif (native))
+Press [q] to stop, [?] for help
+Output #0, gif, to 'output_file.gif':
+Metadata:
+encoder : Lavf58.29.100
+Stream #0:0(eng): Video: gif, bgr8, 500x375 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 10 fps, 100 tbn, 10 tbc (default)
+Metadata:
+title : Video
+encoder : Lavc58.54.100 gif
+frame= 21 fps=0.0 q=-0.0 Lsize= 750kB time=00:00:02.01 bitrate=3058.0kbits/s speed= 17x
+video:750kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.002603%</div>
+
+???
+Here's an example of what it looks like when things go well. There is often a lot to decipher. We will walk through this.
+---
+## The command that was pasted in: 
+
+```bash 
+ffmpeg -i /path/to/input.webm -vf "fps=10,scale=500:-1" -t 3 -loop 6 output.gif
+```
+
+.center[![](../assets/img/homers-web-page.gif) ]
+
+[source: ffmprovisr](https://amiaopensource.github.io/ffmprovisr/index.html#create_gif)
+
+???
+Here is the command that was pasted in.
+
+Side note, I think this is a weird, unnatural command, but it was one of the first scripts
+to be added to ffmprovisr, which is meant to be a tool for learning, so it's a bit difficult
+intentionally. It's meant to be what Marshall McLuhan considers a "cool" media and stimulate
+active thinking, but I just end up thoughtlessly cp-and-pasting this and end up with gifs that
+don't loop forever
+
+---
+FFmpeg introduces itself:
+
+```bash
+ffmpeg version 4.2.1 Copyright (c) 2000-2019 the FFmpeg developers
+built with gcc 5.5.0 (Homebrew gcc 5.5.0_4)
+configuration: --prefix=/home/linuxbrew/.linuxbrew/Cellar/ffmpeg/4.2.1_1 --enable-shared --enable-pthreads
+--enable-version3 --enable-avresample --cc=gcc-5 --host-cflags= --host-ldflags= --enable-ffplay --enable-gnutls
+--enable-gpl --enable-libaom --enable-libbluray --enable-libmp3lame --enable-libopus --enable-librubberband
+--enable-libsnappy --enable-libtesseract --enable-libtheora --enable-libvidstab --enable-libvorbis --enable-libvpx
+--enable-libx264 --enable-libx265 --enable-libxvid --enable-lzma --enable-libfontconfig --enable-libfreetype
+--enable-frei0r --enable-libass --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenjpeg
+--enable-librtmp --enable-libspeex --enable-libsoxr --disable-libjack --disable-indev=jack
+libavutil 56. 31.100 / 56. 31.100
+libavcodec 58. 54.100 / 58. 54.100
+libavformat 58. 29.100 / 58. 29.100
+libavdevice 58. 8.100 / 58. 8.100
+libavfilter 7. 57.100 / 7. 57.100
+libavresample 4. 0. 0 / 4. 0. 0
+libswscale 5. 5.100 / 5. 5.100
+libswresample 3. 5.100 / 3. 5.100
+libpostproc 55. 5.100 / 55. 5.100
+```
+
+???
+First, FFmpeg introduces itself. Hello! This is the version, the version of the C compiler, the configuration (can see this was installed via Linuxbrew),
+this large bit that often starts with dash dash enable,
+and the versions of each of the libraries
+
+---
+## FFmpeg tells you what it knows about your input:
+
+```bash
+Input #0, matroska,webm, from '/path/to/input.webm':
+Metadata:
+encoder : GStreamer matroskamux version 1.14.5
+creation_time : 2019-11-06T20:48:13.000000Z
+Duration: 00:00:02.07, start: 0.000000, bitrate: 1229 kb/s
+```
+
+- Computers start counting at zero
+- This is information about the wrapper/container
+
+???
+First, FFmpeg tells you what it knows about your input, and starts at zero like computers do.
+Input zero is the first input. And then it tells you some general information about the
+wrapper/container, such as what encoder was used, the creation time, the duration, the bitrate.
+
+---
+## FFmpeg tells you what it knows about your first stream:
+
+```bash
+Stream #0:0(eng): Video: vp8, yuv420p(progressive), 640x480, SAR 1:1 DAR 4:3, 30 fps, 30 tbr, 1k tbn, 1k tbc (default)
+Metadata:
+title : Video
+```
+
+- Again starts at zero
+- This is information about the video stream: encoding information, 
+- it is using the vp8 codec,
+- the colorspace is YUV with 4:2:0 bit depth, progressive scan, 
+- 640x480 pixel dimensions,
+- the SAR (sample aspect ratio) is 1:1, 
+- the DAR (pixel aspect ratio) is 4:3, 
+- 30 frames per second...
+- tbr: assumed frame rate, tbn: container's timebase, tbc: codec's timebase
+
+???
+Next, FFmpeg tells you what it knows about your first stream
+
+(read slides)  
+not crucial to debugging but understanding these concepts individually will help you better understand
+what is wrong when things go wrong, and there may be expectations you had about your file that are incorrect
+---
+## FFmpeg tells you what it knows about your second stream:
+
+```bash
+Stream #0:1(eng): Audio: vorbis, 44100 Hz, mono, fltp (default)
+Metadata:
+title : Audio
+```
+
+- This is information about the audio stream
+- It still IDs this stream even if its going to get thrown out
+- The codec is vorbis,
+- the sample rate is 44100 Hz,
+- the audio is in mono,
+- and fltp is the planar floating point format
+- I don't know what that means but it's the default
+
+???
+FFmpeg tells you what it knows about your second stream. This is often the audio stream.
+
+It's Stream 0:1 because it's the first input file, and the second stream.
+
+Counting from zero is something I'm used to, but it takes a while to get comfortable.
+
+It's still identifying and describing this stream, even if its going to get thrown out in the process
+because this command is making a gif, which has no audio track.
+---
+## FFmpeg lets you know that it has a plan:
+
+```bash
+Stream mapping:
+Stream #0:0 -> #0:0 (vp8 (native) -> gif (native))
+```
+.center[![](../assets/img/simpsons-perfect-setup.gif)]
+
+???
+Ffmpeg now lets you know that it has a plan: mapping the first stream of the first input
+file to the first stream of the first output file.
+---
+## FFmpeg letting you know that its not too late:
+
+```bash
+Press [q] to stop, [?] for help
+```
+- just FYI -- get out while you can!
+
+.center[![](../assets/img/homer-simpson-bush.gif)]
+
+???
+FFmpeg letting you know that its not too late. It's about to kick this party off,
+and you can escape if you need to.
+
+---
+## FFmpeg telling you what kind of output file it is going to create:
+
+```bash
+Output #0, gif, to 'output.gif':
+Metadata:
+encoder : Lavf58.29.100
+```
+
+- FFmpeg is making one file (It's a GIF)
+.right[![](../assets/img/bart-supercreature.gif)]
+???
+Then FFmpeg telling you what kind of output file it is going to create
+
+---
+## FFmpeg telling you the stats of the file it is creating:
+
+```bash
+Stream #0:0(eng): Video: gif, bgr8, 500x375 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 10 fps, 100 tbn, 10 tbc (default)
+Metadata:
+title : Video
+encoder : Lavc58.54.100 gif
+frame= 21 fps=0.0 q=-0.0 Lsize= 750kB time=00:00:02.01 bitrate=3058.0kbits/s speed= 17x
+video:750kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.002603%
+```
+
+- FFmpeg is making one stream in the first file
+- It's a GIF
+
+???
+FFmpeg telling you the stats of the file it is creating, this is similar to a few slides
+back where FFmpeg describes the input file
+
+---
+# demux, decode, encode, mux
+
+.center[![](../assets/img/ffmpeg-transcoding.jpg)]
+
+???
+Here's this again, as a reminder that the work will then follow this pattern:
+demux, decode, encode, mux
+
+---
+class: middle
+
+# Part 2: Understanding Logs
+
+???
+This brings us to part two (we started at zero, so the third part), understanding logs
+---
+
+# Reading logs, a primer
+
+.center[![](../assets/img/homer-reading.gif)]
+
+???
+A large part of being a developer is learning how to read logs, because mistakes
+are constantly happening.
+
+---
+# Don't panic!
+
+.center[![](../assets/img/homer-calm-down.gif) ]
+
+???
+So first of all, stay calm! It's normal for things to go wrong when you 
+are testing out a new script, testing new parameters for a script, or
+working with unusual files or files that are full of edge cases, which
+is everything.
+
+---
+# Read from the bottom up
+
+.center[![](../assets/img/ffmpeg-nosuchfile.jpg) ]
+
+???
+Read from the bottom up. The problem is very often the last thing
+that was printed to the screen, so start there and save yourself
+some time.
+
+---
+# Look for the word "Error"
+
+.center[![](../assets/img/ffmpeg-unsupported-codec.jpg)]
+
+???
+Look for the word "Error" Sounds obvious, and it is.
+People writing code libraries try to follow patterns such as 
+declaring an Error by name, or the word Warning when something
+is not ideal but not enough to warrant a shutting down of the process.
+
+---
+# Colors are clues
+
+.center[![](../assets/img/big-ffmpeg-error-log.jpg) ]
+
+???
+FFmpeg is helpful in that it will, when possible, display errors, warnings,
+or information messages in colors to get your attention
+
+---
+# Review what you wrote
+
+.center[![](../assets/img/simpsons-writing.gif) ]
+
+???
+Take a look at what you wrote. 
+The error is often in the command, not a problem with FFmpeg (although
+I'll give some examples of that in a bit), so take a deeper look at
+your command -- are you telling FFmpeg everything it needs to know?
+
+---
+# Internet search
+
+.center[![](../assets/img/homer-internet-on-computers.gif) ]
+
+???
+Finally, use your resources. 
+If the error doesn't make sense to you, paste it into your favorite internet
+search provider because someone has almost definitely also had this problem
+and you will probably be guided towards StackOverflow or the ffmpeg-user list
+where someone else has given an answer
+
+---
+# Search the source code
+
+.center[![](../assets/img/tilesizeisinsane.png)]
+
+Source: [@dericed](https://twitter.com/dericed/status/1197964820076736512)
+???
+Remember that error messages are written by humans and that FFmpeg is an open source
+library, so you can search the source code for the particular phrase. Even if you are
+brand new to looking at technical things, you may still be able to decipher what
+caused the error message to pop up using basic if/else logic and some elementary
+math skills (addition, division, greater than or less than...)
+
+---
+# But what about bad things
+
+.center[![](../assets/img/shine-o.gif)]
+
+???
+But okay, we've seen what happens when a simple file conversion goes well. What else can go wrong?
+---
+class: middle
+
+# Part 3: Understanding Errors
+
+???
+Part 3, understanding errors.
+---
+# Let's look!
+
+.center[![](../assets/img/simpsons-any-key.gif)]
+
+???
+I'm going to step through some examples of real errors and how they can be deciphered
+
+---
+## Let's kick it off with an easy one
+
+```ruby
+[libx264 @ 0x5590b0c98cc0] height not divisible by 2 (1920x1013)
+```
+
+.center[![](../assets/img/simpsons-math.gif)]
+
+???
+This one is easy to read, but not necessarily easy to understand. All of the information is available in this one line.
+height not divisible by 2. The dimensions of this original file were 1920 by 1013, and 1013 is an odd number. FFmpeg is trying to run libx264, and encode
+the video stream of this file into h264. h264, like many codecs, break things into chunks for encoding and assume that all video files will
+be an even number in the width and height.
+
+---
+# No such filter: 'drawtext'
+
+- You don't have this filter
+- Reinstall and `--enable-libfreetype`
+
+.center[![](../assets/img/homer-miss-you.gif)]
+
+???
+Next! No such filter drawtext. This happens if you have compiled a basic version of FFmpeg that didn't include the drawtext filter.
+You will have to reinstall FFmpeg with this filter, --enable-libfreetype.
+
+Something to note here is sometimes these things change, like what the default settings are depending on the ffmpeg version and the
+way in which you are installing ffmpeg (through homebrew or compiling on your own), and sometimes the names themselves change, so 
+when looking for what you need, take care to make sure that information is relatively recent
+
+---
+
+# Unknown encoder 'whatever'
+
+- Check `ffmpeg -codecs` to see if your encoder exists
+- You may have typed the wrong name, e.g. `pcm` instead of `pcm_s16le`
+
+.center[![](../assets/img/homer-math-ref.gif)]
+
+???
+Unknown encoder! If you are looking to encode into something, you can check ffmpeg -codecs
+to see if that encoder exists and that you have it in your compiled version. You may
+also have just typed in the wrong name and need to double-check.
+
+---
+# Output file #0 does not contain any stream
+
+- This is probably a typo
+- Did you remember to add `-i` before your input file?
+
+.center[![](../assets/img/homer-forgot.gif)]
+
+???
+Output file #0 does not contain any stream. This is likely the result of a typo. Did you remember to add `-i`?
+
+---
+.center[![](../assets/img/ffmpeg-unsupported-codec.jpg)]
+
+.center[![](../assets/img/homer-swirl.gif)]
+
+???
+[mp4 @ 0x24ea680] Could not find tag for codec pcm_s16le in stream #1, codec not currently supported in container
+Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument
+
+Are you trying to make an mp4 but copying the existing codecs? This is when this error most commonly happens,
+when trying to use a codec mp4 doesn't like. Mp4s are happy with codecs like h264 and AAC, but are not happy
+with codecs like FFV1 or PCM. In this example, it's a problem with trying to force PCM audio into the stream When
+MP4 wants AAC, hence the problem being in stream #1, which as a reminder is the second stream.
+
+---
+.center[![](../assets/img/ffmpeg-transcoding.jpg)]
+
+???
+The second error is because this error happened during the second encoding, and it's helpful to
+refer back to this diagram from the ffmpeg documentation
+
+---
+```ruby
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x561a0007c380] moov atom not found
+Intercepted_Kiss.mov: Invalid data found when processing input
+```
+
+.center[![](../assets/img/science-is-carl.gif)]
+
+???
+Next one ... Moov atom not found, uh oh, seems important
+The moov atom is the index of the file, and gives important context for things like timescale, duration, display data, track info.
+so not having it is ... bad
+
+---
+
+
+.center[![](../assets/img/homer-squinting.gif) ![](../assets/img/big-ffmpeg-error-log.jpg) ]
+???
+Okay, this next one requires some context clues to figure out where to dig in
+
+---
+
+### `My_House_Got_Egged.mov: corrupt input packet in stream 0.44 bitrate= 474.6kbits/s speed=16.3x`
+### `[svq3 @ 0x1a8cc00] slice after bitstream end`
+### `Error while decoding stream #0:0: Operation not permitted`
+
+???
+
+SVQ3 is the Sorenson 3 codec, which rose and fell in popularity in the early 2000s, and was compared to h264.
+
+---
+
+.center[![](../assets/img/slice-after-bitstream-ends.jpg)]
+
+???
+I went into the code for this one,
+but essentially the stream gets cut off in the middle. this could be from a disrupted transmission or data loss.
+it ran out of data to read unexpectedly.
+---
+# (Time allowing)... A few more!
+
+```ruby
+videohow_can_we_stay_mad03.mov: corrupt input packet in stream 1
+[pcm_s16le @ 0x24bc240] Multiple frames in a packet.
+[pcm_s16le @ 0x24bc240] Invalid PCM packet, data has size 2 but at least a size of 4 was expected
+Error while decoding stream #0:1: Invalid data found when processing input
+[mov,mp4,m4a,3gp,3g2,mj2 @ 0x24b4e40] stream 1, offset 0x35813e: partial file
+videohow_can_we_stay_mad03.mov: Invalid data found when processing input
+```
+
+.center[![](../assets/img/homer-at-work-1.gif)]
+
+???
+What can we tell about the file, given these errors? Both the audio and video tracks are disrupted
+
+---
+# (Time allowing)... Last one
+
+```ruby
+[mjpeg @ 0x1bc07c0] overread 7
+[mjpeg @ 0x1bc07c0] EOI missing, emulating
+```
+
+.center[![](../assets/img/homer-at-work-2.gif)]
+
+???
+Again, FFmpeg is reaching for the next chunk of data that it expects to find, and comes up empty
+EOI in this instance stands for End of Image, meaning it has to figure the rest out on its own
+
+---
+# See also
+
+- [FFmpeg wiki: Errors page](https://trac.ffmpeg.org/wiki/Errors)
+- [FFmpeg documentation: -loglevel](http://ffmpeg.org/ffmpeg.html#Generic-options)
+- [ffmprovisr](https://amiaopensource.github.io/ffmprovisr/)
+---
+# Thank you
+
+- Thanks for listening
+- Are there any questions?
+- If you tell me a Simpsons joke I probably won't get it
+
+.center[![](../assets/img/homer-work-harder.gif)]
+
+---
+    </textarea>
+    <script src="../assets/remark.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({ ratio: '16:9'});
+    </script>
+  </body>
+</html>
