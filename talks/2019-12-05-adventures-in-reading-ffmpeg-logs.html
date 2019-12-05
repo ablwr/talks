@@ -258,8 +258,8 @@ title : Video
 - it is using the vp8 codec,
 - the colorspace is YUV with 4:2:0 bit depth, progressive scan, 
 - 640x480 pixel dimensions,
-- the SAR (sample aspect ratio) is 1:1, 
-- the DAR (pixel aspect ratio) is 4:3, 
+- the SAR (storage aspect ratio) is 1:1, 
+- the DAR (display aspect ratio) is 4:3, 
 - 30 frames per second...
 - tbr: assumed frame rate, tbn: container's timebase, tbc: codec's timebase
 
@@ -407,6 +407,7 @@ some time.
 .center[![](../assets/img/ffmpeg-unsupported-codec.jpg)]
 
 ???
+Next one..
 Look for the word "Error" Sounds obvious, and it is.
 People writing code libraries try to follow patterns such as 
 declaring an Error by name, or the word Warning when something
@@ -418,6 +419,7 @@ is not ideal but not enough to warrant a shutting down of the process.
 .center[![](../assets/img/big-ffmpeg-error-log.jpg) ]
 
 ???
+Colors are clues! 
 FFmpeg is helpful in that it will, when possible, display errors, warnings,
 or information messages in colors to get your attention
 
@@ -438,7 +440,7 @@ your command -- are you telling FFmpeg everything it needs to know?
 .center[![](../assets/img/homer-internet-on-computers.gif) ]
 
 ???
-Finally, use your resources. 
+Also!, use your resources. 
 If the error doesn't make sense to you, paste it into your favorite internet
 search provider because someone has almost definitely also had this problem
 and you will probably be guided towards StackOverflow or the ffmpeg-user list
@@ -451,6 +453,7 @@ where someone else has given an answer
 
 Source: [@dericed](https://twitter.com/dericed/status/1197964820076736512)
 ???
+And finally,
 Remember that error messages are written by humans and that FFmpeg is an open source
 library, so you can search the source code for the particular phrase. Even if you are
 brand new to looking at technical things, you may still be able to decipher what
@@ -477,7 +480,7 @@ Part 3, understanding errors.
 .center[![](../assets/img/simpsons-any-key.gif)]
 
 ???
-I'm going to step through some examples of real errors and how they can be deciphered
+I'm going to step through some examples of some common errors and how they can be deciphered
 
 ---
 ## Let's kick it off with an easy one
@@ -541,6 +544,8 @@ Output file #0 does not contain any stream. This is likely the result of a typo.
 .center[![](../assets/img/homer-swirl.gif)]
 
 ???
+Okay here's a bigger one, one that is more complex
+
 [mp4 @ 0x24ea680] Could not find tag for codec pcm_s16le in stream #1, codec not currently supported in container
 Could not write header for output file #0 (incorrect codec parameters ?): Invalid argument
 
@@ -568,6 +573,12 @@ Intercepted_Kiss.mov: Invalid data found when processing input
 Next one ... Moov atom not found, uh oh, seems important
 The moov atom is the index of the file, and gives important context for things like timescale, duration, display data, track info.
 so not having it is ... bad
+You can see this error occurs for a lot of different formats - mov, mp4, m4a, mj2 ...)
+For some formats, the moov atom is added to the end of a file, so the file may be corrupt
+or interrupted during transmission
+If a file was uploaded to the server and that upload was broken, which is what I think
+happened with this fileset I was working with, it will have lost that important piece of
+the video file
 
 ---
 
