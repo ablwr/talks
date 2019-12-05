@@ -62,7 +62,8 @@ class: middle
 # Part 1: Understanding Video
 
 ???
-So we made it past part 0, now onto part 1, understanding video
+So we made it past part 0, the metadata header part of the talk,
+now onto part 1, understanding video
 ---
 # What is video?
 
@@ -77,8 +78,8 @@ What is video? Well, I don't think this question is as easy to answer.
 
 ???
 Because video means a lot of different things to different people. 
-A single entity, an audiovisual format that is not film, a broadcast, 
-a VHS tape, electromagnetic waves flowing through the ether...
+An audiovisual format that is not film, a broadcast, 
+a VHS tape, electromagnetic waves flowing through the ether...etc
 
 ---
 # What does FFmpeg think a video is?
@@ -99,7 +100,9 @@ A video is made up of one or more streams:
 .right[![](../assets/img/simpsons-tv.gif)]
 
 ???
-So in this context, a video is made up of streams. Basically, video, audio, text, data
+So in this context, we should conceptualize a video 
+as being made up of streams. Basically, the streams are
+video, audio, text, data
 ---
 # FFmpeg follows this pattern
 - and you should too 
@@ -175,7 +178,10 @@ frame= 21 fps=0.0 q=-0.0 Lsize= 750kB time=00:00:02.01 bitrate=3058.0kbits/s spe
 video:750kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.002603%</div>
 
 ???
-Here's an example of what it looks like when things go well. There is often a lot to decipher. We will walk through this.
+Here's the complete, uncut console output of what it looks like when things go well. 
+There is often a lot to decipher, FFmpeg is a bit chatty compared to other command line tools
+and it can be intimidating to see so much text on the screen, even when there's
+nothing wrong. We will walk through this.
 ---
 ## The command that was pasted in: 
 
