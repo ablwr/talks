@@ -2,7 +2,8 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2019
 
-- 2019-12-05 No Time To Wait: Adventures in reading FFmpeg logs | [slides](talks/2019-12-05-adventures-in-reading-ffmpeg-logs.html)(press 'p' for presenter's notes)
+- 2019-12-05 No Time To Wait: Adventures in reading FFmpeg logs | [slides](talks/2019-12-05-adventures-in-reading-ffmpeg-logs.html) (press 'p' for presenter's notes)
+- 2019-09-18 iPres: Archivematica as a Case Study for Sustained Digital Preservation | [paper](https://ipres2019.org/static/proceedings/iPRES2019.pdf)
 - 2019-09-18 iPres: Sustainability through Community: ffmprovisr and the Case for Collaborative Knowledge Transfer | [paper](talks/2019-09-18-blewerweaver-ipres19.pdf)
 - 2019-08-06 Society of American Archivists: BloggERS presents: Script It! Developing Technical Literacy in the Archives: Git-keeping: The Many Technical Skills Beyond 'Learning to Code' | [mp4](talks/2019-08-06-script-it.mp4) | [slides, as pdf](talks/2019-08-06-gitkeeping.pdf) | [slides, as pptx (with speakernotes)](talks/2019-08-06-gitkeeping.pptx) | [blog post](https://saaers.wordpress.com/2018/12/11/trained-in-classification-without-classification/)
 - 2019-04-27 Bastard Film Encounter: Rhonda's Greatest Hits | [blog post](https://bits.ashleyblewer.com/blog/2019/04/20/rhondas-greatest-hits-bastard-film-encounter/)
