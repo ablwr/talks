@@ -20,7 +20,7 @@ Repository containing all talks I have given, with links to related materials. F
 - 2018-10-16 DLF Forum: Approaches to A/V | [notes](https://docs.google.com/document/d/1wX95KanmaUXkHnLyw3EBTnvDYBdgWaPseqdHqenM6AQ/edit)
 - 2018-09-05 NDSA Content Group Meeting: AV Preservation | [video](https://youtu.be/R9o3z-sFSb4) | [slides](talks/2018-09-05-ndsa-content-interest-group-avpres.html)
 - 2018-06-04 WGBH AAPB Public Broadcasting Preservation Fellowship: Tech Workshop | [slides](talks/2018-06-04-aapb-pbpf.html)
-- 2018-05-07 Recurse Center: Internet Girlfriend Club! | [slides](talks/2018-05-07-internet-girlfriend-club.html)
+- 2018-05-07 Recurse Center: Internet Girlfriend Club! | [slides](talks/2018-05-07-internet-girlfriend-club.html) | [website](http://internetgirlfriend.club/)
 - 2018-04-17 IS&T ARCH2018: "Digital Audiovisual File Formats: Identification, Validation, Specification Verification" Workshop | [slides](talks/2018-04-17-arch2018-formats-standards-validation.html)  
 - 2018-03-23 National Forum on Ethics and Archiving the Web: Fidelity, Integrity, & Compromise | [slides](talks/2018-03-23-ethics-archiving-web.key) (Keynote) | [transcript](talks/2018-03-23-ethics-archiving-web.md) | [video (1:32:00)](https://livestream.com/newmuseum/EAWRhizomeSession5/videos/172190125)
 - 2018-02-15 Code4lib: [Beyond Open Data](http://2018.code4lib.org/talks/beyond-open-data) | [repo](https://github.com/saverkamp/beyond-open-data)
@@ -37,7 +37,7 @@ Repository containing all talks I have given, with links to related materials. F
 - 2016-10-14 iPRES: Quality Standards for Preserving Digital Cultural Heritage | [website](https://ipr16.organizers-congress.org/frontend/index.php?page_id=1151&v=List&do=0&day=54)
 - 2016-10-03 iPRES: [Status of CELLAR: Update from an IETF Working Group for Matroska and FFV1](https://ipr16.organizers-congress.org/frontend/index.php?page_id=1151&v=List&do=0&day=52) | [slides](https://docs.google.com/presentation/d/1i31RE5pQM0SHm8Y_OYm9mt9RtH-OVmvjRjVayDr7vzw/edit?usp=sharing) | [whitepaper](http://ashleyblewer.com/img/blewer_rice_ipres_status_of_cellar.pdf) 
 - 2016-07-23 Northeast Historic Film: Buying Lobster Rolls With Linden Dollars: Virtual Tourism and Digital Visions of New England in Second Life and Beyond | [slides](https://docs.google.com/presentation/d/132MQalXuO1Yn3xLuw29i1apN1K80TixgXZWMhMkf7cs/edit#slide=id.g11599e9a64_0_7) | [video](https://vimeo.com/174605137) 
-- 2016-07-23 Tate: Conservation of Digital Video Workshop | [website](http://pericles-project.eu/blog/post/TateWorkshop2016)
+- 2016-07-23 Tate: Conservation of Digital Video Workshop | [website, archived](https://web.archive.org/web/20180105112324/http://pericles-project.eu/blog/post/TateWorkshop2016)
 - 2016-07-18 No Time To Wait! | [website](https://mediaarea.net/NoTimeToWait1)
 - 2016-04-03 NYU MIAP: XSLT Workshop | [slides](https://github.com/ablwr/xslt_miap_2016)
 - 2016-03-10 Code4lib: Free your workflows (and the rest will follow): community-driven AV solutions through open source workflow development | [slides](http://ablwr.github.io/free_your_workflows/#/) | [video](https://www.youtube.com/watch?v=pSlJr8L8dpA&feature=youtu.be&t=53m50s)
@@ -45,7 +45,7 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2015
 
-- 2015-11-20 AMIA: Validate Your Digital Assets: PREFORMA, MediaConch and File Compliance | [slides](http://ablwr.github.io/mediaconch_amia15/#/) 
+- 2015-11-20 AMIA: Validate Your Digital Assets: PREFORMA, MediaConch and File Compliance | [slides](http://ablwr.github.io/mediaconch_amia15/#/)  
 - 2015-11-20 AMIA: Seeding and Leeching: Collaborative Preservation using BitTorrent | [slides](https://docs.google.com/presentation/d/1KcdH0I9vGEHJyDolYwxFGkimA80srjAQf_FCSKac3ec/edit?usp=sharing) 
 - 2015-09-27 IASA: MediaConch | [slides](https://docs.google.com/presentation/d/1gE0SqGE0-MAJgOS2nXNvf0T-ILXEj1PXqtovFQfSZFY/edit) 
 - 2015-11-20 AMIA (kinda): Advice for New Grads | [slides](http://ablwr.github.io/amia15_advice/#/) | [blog](http://ablwr.github.io/blog/2016/09/23/facing-fear-first/) 
