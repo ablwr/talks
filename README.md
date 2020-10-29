@@ -3,6 +3,7 @@ Repository containing all talks I have given, with links to related materials. F
 # 2020
 
 - 2020-05-15 Recurse Center Never Graduate Week: Exploring the Vasulka PDF Archive | [slides](https://docs.google.com/presentation/d/1sDGtwk40Sec38Cg-NwR-aEMJNmvX44tzWGcIhOMZzeQ/edit?usp=sharing) | [project](http://bits.ashleyblewer.com/vasulka/)
+
 # 2019
 
 - 2019-12-05 No Time To Wait: Adventures in reading FFmpeg logs | [slides](talks/2019-12-05-adventures-in-reading-ffmpeg-logs.html) (press 'p' for presenter's notes)
