@@ -2,7 +2,10 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2020
 
-- 2020-05-15 Recurse Center Never Graduate Week: Exploring the Vasulka PDF Archive | [slides](https://docs.google.com/presentation/d/1sDGtwk40Sec38Cg-NwR-aEMJNmvX44tzWGcIhOMZzeQ/edit?usp=sharing) | [project](http://bits.ashleyblewer.com/vasulka/)
+- 2020-05-14 Recurse Center Never Graduate Week: Exploring the Vasulka PDF Archive | [slides](https://docs.google.com/presentation/d/1sDGtwk40Sec38Cg-NwR-aEMJNmvX44tzWGcIhOMZzeQ/edit?usp=sharing) | [project](http://bits.ashleyblewer.com/vasulka/)
+- 2020-11-19 Association of Moving Image Archivists: Return of the DVRescuer | [video](https://www.youtube.com/watch?v=YGPIqJ4_ssI)  
+- 2020-11-20 Association of Moving Image Archivists: Audio Video Known Issues Data (AVKID) Initiative | [video](https://www.youtube.com/watch?v=diRc-S2vu-k)  
+
 
 # 2019
 
