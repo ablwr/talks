@@ -1,4 +1,4 @@
-Repository containing all talks I have given, with links to related materials. From 2018 onward, some talks are hosted here in this repo. 
+Repository containing all talks I have given, publications I've been involved with, places I've been interviewed, with links to related materials. From 2018 onward, some materials are hosted here in this repo. 
 
 # 2020
 
@@ -12,7 +12,8 @@ Repository containing all talks I have given, with links to related materials. F
 - 2019-12-05 No Time To Wait: Adventures in reading FFmpeg logs | [slides](talks/2019-12-05-adventures-in-reading-ffmpeg-logs.html) (press 'p' for presenter's notes)
 - 2019-09-18 iPres: Archivematica as a Case Study for Sustained Digital Preservation | [paper](https://ipres2019.org/static/proceedings/iPRES2019.pdf)
 - 2019-09-18 iPres: Sustainability through Community: ffmprovisr and the Case for Collaborative Knowledge Transfer | [paper](talks/2019-09-18-blewerweaver-ipres2019.pdf)
-- 2019-08-06 Society of American Archivists: BloggERS presents: Script It! Developing Technical Literacy in the Archives: Git-keeping: The Many Technical Skills Beyond 'Learning to Code' | [mp4](talks/2019-08-06-script-it.mp4) | [slides, as pdf](talks/2019-08-06-gitkeeping.pdf) | [slides, as pptx (with speakernotes)](talks/2019-08-06-gitkeeping.pptx) | [blog post](https://saaers.wordpress.com/2018/12/11/trained-in-classification-without-classification/)
+- 2019-08-06 Society of American Archivists: BloggERS presents: Script It! Developing Technical Literacy in the Archives: Git-keeping: The Many Technical Skills Beyond 'Learning to Code' | [mp4](talks/2019-08-06-script-it.mp4) | [slides, as pdf](talks/2019-08-06-gitkeeping.pdf) | [slides, as pptx (with speakernotes)](talks/2019-08-06-gitkeeping.pptx) 
+- 2019-07-19 "The Word Real Is No Longer Real": Deepfakes, Gender, and the Challenges of AI-Altered Video | [DOI](https://doi.org/10.1515/opis-2019-0003)
 - 2019-04-27 Bastard Film Encounter: Rhonda's Greatest Hits | [blog post](https://bits.ashleyblewer.com/blog/2019/04/20/rhondas-greatest-hits-bastard-film-encounter/)
 - 2019-02-21 Code4lib: The Real World of Technology | [video](https://www.youtube.com/watch?v=GDC7nxtdG3s&feature=youtu.be&t=1111) | [transcript++](https://bits.ashleyblewer.com/blog/2019/02/23/code4lib-2019-lightning-talk-real-world-of-technology/)
 - 2019-02-19 Code4lib: Forensic Files, Episode 1: "Fishing for the Truth" | [slides](https://docs.google.com/presentation/d/11Ug8Z9BJ_sS-pQcdPmM96BMXBrpho2ASRp0pcZIIbpE) | [website](https://2019.code4lib.org/workshops/Forensic-Files-Episode-1-Fishing-for-the-Truth)
@@ -20,8 +21,11 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2018 
 
+- 2018 Museum of the Lost Web: Freezone | [webpage](http://allegrarosenberg.com/school/mlw-project/stories/ashley-blewer)
+- 2018-12-11 Society of American Archivists: bloggERS Making Tech Skills a Strategic Priority: "Trained in Classification, Without Classification" | [blog post](https://saaers.wordpress.com/2018/12/11/trained-in-classification-without-classification/)
 - 2018-11-30 CNA & Technoport Luxembourg ["Hack Your Heritage"](http://www.cnadigital.lu/hackathon): Working in open source... in cultural heritage | [video](https://vimeo.com/303734596) | [slides](talks/2018-11-30-open-source-cultural-heritage.html) 
 - 2018-11-27 Centre national de l'audiovisuel Luxembourg and MediaArea: Open Source Quality Checking Workshop | [video]( https://www.youtube.com/watch?v=qT7NP1-ONro) | [slides](talks/2018-11-27-open-source-quality-checking-workshop.html) | [website](https://mediaarea.net/QCWorkshop2018)
+- 2018-11-12 [Archivist's Alley](http://archivistsalley.com/): Ashley Blewer: Digital Archiving, Open Source Work & Systems of Strength| [webpage](http://archivistsalley.com/ashley-blewer-digital-archiving-open-source-work-systems-of-strength/)
 - 2018-10-26 No Time To Wait! 3: The Developer-Archivist: a Definition of the Profession | [video](https://youtu.be/BOTwj7qmMOU?t=9898) | [website](https://mediaarea.net/NoTimeToWait3)
 - 2018-10-17 DLF Forum: Open Options for Audiovisual Preservation | [OSF](https://osf.io/snyfd/) | [slides](https://docs.google.com/presentation/d/1ddQniWhajbqwEpG1F4YS7Q6533mQVlDxVtWxg-diP5g/edit#slide=id.p) | [notes](https://docs.google.com/document/d/1Ug_WsXYLqQRMVeYT6LIcXpVLhQivuBMbkmOVywbMkZ0/edit)
 - 2018-10-16 DLF Forum: Approaches to A/V | [notes](https://docs.google.com/document/d/1wX95KanmaUXkHnLyw3EBTnvDYBdgWaPseqdHqenM6AQ/edit)
@@ -40,6 +44,7 @@ Repository containing all talks I have given, with links to related materials. F
 
 # 2016
 
+- 2016-12 The Signal: Wisdom is Learned, an interview with applications developer Ashley Blewer | [blog](https://blogs.loc.gov/thesignal/2016/12/wisdom-is-learned-an-interview-with-applications-developer-ashley-blewer/)
 - 2016-10-17 USC SLIS 777 Guest Lecture: What is a minimum digital repository? | [video/transcript](https://ablwr.github.io/slis777/)
 - 2016-10-14 iPRES: Quality Standards for Preserving Digital Cultural Heritage | [website](https://ipr16.organizers-congress.org/frontend/index.php?page_id=1151&v=List&do=0&day=54)
 - 2016-10-03 iPRES: [Status of CELLAR: Update from an IETF Working Group for Matroska and FFV1](https://ipr16.organizers-congress.org/frontend/index.php?page_id=1151&v=List&do=0&day=52) | [slides](https://docs.google.com/presentation/d/1i31RE5pQM0SHm8Y_OYm9mt9RtH-OVmvjRjVayDr7vzw/edit?usp=sharing) | [whitepaper](http://ashleyblewer.com/img/blewer_rice_ipres_status_of_cellar.pdf) 
@@ -47,22 +52,24 @@ Repository containing all talks I have given, with links to related materials. F
 - 2016-07-23 Tate: Conservation of Digital Video Workshop | [website, archived](https://web.archive.org/web/20180105112324/http://pericles-project.eu/blog/post/TateWorkshop2016)
 - 2016-07-18 No Time To Wait! | [website](https://mediaarea.net/NoTimeToWait1)
 - 2016-04-03 NYU MIAP: XSLT Workshop | [slides](https://github.com/ablwr/xslt_miap_2016)
+- 2016-03-28 NYPL: Women's History in Digital Collections | [blog](https://www.nypl.org/blog/2016/03/28/womens-history-digital-collections)
 - 2016-03-10 Code4lib: Free your workflows (and the rest will follow): community-driven AV solutions through open source workflow development | [slides](http://ablwr.github.io/free_your_workflows/#/) | [video](https://www.youtube.com/watch?v=pSlJr8L8dpA&feature=youtu.be&t=53m50s)
+- 2016-02 The Signal: Demystifying Digital Preservation for the Audiovisual Archiving Community | [blog](http://blogs.loc.gov/thesignal/2016/02/demystifying-digital-preservation-for-the-audiovisual-archiving-community/)
+- 2016-01-19 Technology is People (NYPL) | [webpage](http://ablwr.github.io/technology-is-people/)
+- 2016: LITA: The Librarian's introduction to programming languages (Ruby chapter) | [worldcat](https://www.worldcat.org/title/librarians-introduction-to-programming-languages-a-lita-guide/oclc/951809593)
 
-
-# 2015
+# 2015 and earlier
 
 - 2015-11-20 AMIA: Validate Your Digital Assets: PREFORMA, MediaConch and File Compliance | [slides](http://ablwr.github.io/mediaconch_amia15/#/)  
 - 2015-11-20 AMIA: Seeding and Leeching: Collaborative Preservation using BitTorrent | [slides](https://docs.google.com/presentation/d/1KcdH0I9vGEHJyDolYwxFGkimA80srjAQf_FCSKac3ec/edit?usp=sharing) 
 - 2015-09-27 IASA: MediaConch | [slides](https://docs.google.com/presentation/d/1gE0SqGE0-MAJgOS2nXNvf0T-ILXEj1PXqtovFQfSZFY/edit) 
 - 2015-11-20 AMIA (kinda): Advice for New Grads | [slides](http://ablwr.github.io/amia15_advice/#/) | [blog](http://ablwr.github.io/blog/2016/09/23/facing-fear-first/) 
+- 2015-09 The Signal: Improving Technical Options for Audiovisual Collections Through the PREFORMA Project | [blog](http://blogs.loc.gov/thesignal/2015/09/improving-technical-options-for-audiovisual-collections-through-the-preforma-project/)
 - 2015-05-17 !!Con: Don't know about you, but I'm feeling like SHA-2! | [slides](http://ablwr.github.io/taylorswift/#/) | [video](https://www.youtube.com/watch?v=1QgamEwwPro) 
+- 2015-05-13 Bustle: How I Found My Way Back To Tech After A Decade | [link](https://www.bustle.com/articles/78360-i-found-my-way-back-to-tech-with-the-help-of-people-who-understood-why-id)
 - 2015-04-24 Personal Digital Archiving: Don't know about you, but I'm feeling like SHA-2! | [slides](http://ablwr.github.io/feeling_like_sha2/#/) | [video](https://www.youtube.com/watch?v=y428qkwEkLQ) 
 - 2015-04-24  Personal Digital Archiving: Does BitTorrent + Private Trackers = The New Film Archive? | [slides](https://docs.google.com/presentation/d/1TUHK-uqA2UMi3yi37Zej3M9KdCXM71ObPRtceDxl-ZA/edit?usp=sharing) | [video](https://archive.org/details/PDA2015) 
 - 2015-02-11 Code4lib: PreForma Project | [slides](http://ablwr.github.io/c4l_preforma/#/) | [video](http://youtu.be/G7kgcZh2zeY?t=2h20m33s)
-
-# 2014 and earlier
-
 - Flatiron School Presents (Meetup): Form Helpers | [slides](https://docs.google.com/presentation/d/1pNKOVcVwY1u5kLwck6VhDyiEvlB7gcynIRHPReTBu0E/edit#slide=id.p) 
 - Orphans Midwest: Un-Caging the Orphan | [slides](https://docs.google.com/presentation/d/11BU71iUH55LaZBu01u9pt_U3iWi-BTDfJNRBDiKFOus/edit#slide=id.p) 
 - Gender, Bodies, Tech: The Palace: Gender Fluidity in Flatland | [slides](https://docs.google.com/presentation/d/1-ACB_oHoPJEqOWbsGqjo5zLNMnV_wf_rYv1ZGCr7RFM/edit) 
@@ -70,4 +77,4 @@ Repository containing all talks I have given, with links to related materials. F
 - USC/WGST Symposium: Moving Image Research Collections, or "We have a film archive?" | [slides](https://docs.google.com/presentation/d/15StvzK6OEaElxOmn8tEwril8u5lzJ62EGYZamT2jar0/edit?usp=sharing) 
 - USC/WGST Symposium: Questions of Opulence: Perception of Women's Bodies Within Roaring Twenties Newsreels | [slides](https://docs.google.com/presentation/d/15StvzK6OEaElxOmn8tEwril8u5lzJ62EGYZamT2jar0/edit#slide=id.g2a01015e2_049) 
 - USC Moving Image Research Collections: Film Library Inspection Party (FLIP) | [video](https://vimeo.com/36563176)
-- [Growing Up Great](https://vimeo.com/77184438)
+- Growing Up Great [video](https://vimeo.com/77184438)
