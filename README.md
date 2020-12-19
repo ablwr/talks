@@ -2,10 +2,9 @@ Repository containing all talks I have given, publications I've been involved wi
 
 # 2020
 
-- 2020-05-14 Recurse Center Never Graduate Week: Exploring the Vasulka PDF Archive | [slides](https://docs.google.com/presentation/d/1sDGtwk40Sec38Cg-NwR-aEMJNmvX44tzWGcIhOMZzeQ/edit?usp=sharing) | [project](http://bits.ashleyblewer.com/vasulka/)
 - 2020-11-19 Association of Moving Image Archivists: Return of the DVRescuer | [video](https://www.youtube.com/watch?v=YGPIqJ4_ssI)  
 - 2020-11-20 Association of Moving Image Archivists: Audio Video Known Issues Data (AVKID) Initiative | [video](https://www.youtube.com/watch?v=diRc-S2vu-k)  
-
+- 2020-05-14 Recurse Center Never Graduate Week: Exploring the Vasulka PDF Archive | [slides](https://docs.google.com/presentation/d/1sDGtwk40Sec38Cg-NwR-aEMJNmvX44tzWGcIhOMZzeQ/edit?usp=sharing) | [project](http://bits.ashleyblewer.com/vasulka/)
 
 # 2019
 
@@ -77,4 +76,4 @@ Repository containing all talks I have given, publications I've been involved wi
 - USC/WGST Symposium: Moving Image Research Collections, or "We have a film archive?" | [slides](https://docs.google.com/presentation/d/15StvzK6OEaElxOmn8tEwril8u5lzJ62EGYZamT2jar0/edit?usp=sharing) 
 - USC/WGST Symposium: Questions of Opulence: Perception of Women's Bodies Within Roaring Twenties Newsreels | [slides](https://docs.google.com/presentation/d/15StvzK6OEaElxOmn8tEwril8u5lzJ62EGYZamT2jar0/edit#slide=id.g2a01015e2_049) 
 - USC Moving Image Research Collections: Film Library Inspection Party (FLIP) | [video](https://vimeo.com/36563176)
-- Growing Up Great [video](https://vimeo.com/77184438)
+- Growing Up Great | [video](https://vimeo.com/77184438)
