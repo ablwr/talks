@@ -1,4 +1,8 @@
-Repository containing all talks I have given, publications I've been involved with, places I've been interviewed, with links to related materials. From 2018 onward, some materials are hosted here in this repo. 
+Repository containing all talks I have given, publications I've been involved with, places I've been interviewed, with links to related materials. Does not include some private institutional trainings. From 2018 onward, some materials are hosted here in this repo. 
+
+# 2021
+
+- Took a break!
 
 # 2020
 
@@ -8,7 +12,10 @@ Repository containing all talks I have given, publications I've been involved wi
 
 # 2019
 
+- 2019-12-05 No Time To Wait: Supporting Archival Practitioners (Roundtable participant) | [video](https://www.youtube.com/watch?v=R3zjcw2z1qM)
 - 2019-12-05 No Time To Wait: Adventures in reading FFmpeg logs | [slides](talks/2019-12-05-adventures-in-reading-ffmpeg-logs.html) (press 'p' for presenter's notes)
+- 2019-12-04 No Time To Wait: Workshop Manager | [website](https://mediaarea.net/NoTimeToWait4)
+- 2019-10-22-24 Archivematica Camp, Geneva/CERN: Training modules | [webpage](https://wiki.archivematica.org/Community/Camps/Geneva2019)
 - 2019-09-18 iPres: Archivematica as a Case Study for Sustained Digital Preservation | [paper](https://ipres2019.org/static/proceedings/iPRES2019.pdf)
 - 2019-09-18 iPres: Sustainability through Community: ffmprovisr and the Case for Collaborative Knowledge Transfer | [paper](talks/2019-09-18-blewerweaver-ipres2019.pdf)
 - 2019-08-06 Society of American Archivists: BloggERS presents: Script It! Developing Technical Literacy in the Archives: Git-keeping: The Many Technical Skills Beyond 'Learning to Code' | [mp4](talks/2019-08-06-script-it.mp4) | [slides, as pdf](talks/2019-08-06-gitkeeping.pdf) | [slides, as pptx (with speakernotes)](talks/2019-08-06-gitkeeping.pptx) 
@@ -24,6 +31,7 @@ Repository containing all talks I have given, publications I've been involved wi
 - 2018-12-11 Society of American Archivists: bloggERS Making Tech Skills a Strategic Priority: "Trained in Classification, Without Classification" | [blog post](https://saaers.wordpress.com/2018/12/11/trained-in-classification-without-classification/)
 - 2018-11-30 CNA & Technoport Luxembourg ["Hack Your Heritage"](http://www.cnadigital.lu/hackathon): Working in open source... in cultural heritage | [video](https://vimeo.com/303734596) | [slides](talks/2018-11-30-open-source-cultural-heritage.html) 
 - 2018-11-27 Centre national de l'audiovisuel Luxembourg and MediaArea: Open Source Quality Checking Workshop | [video]( https://www.youtube.com/watch?v=qT7NP1-ONro) | [slides](talks/2018-11-27-open-source-quality-checking-workshop.html) | [website](https://mediaarea.net/QCWorkshop2018)
+- 2018-11-14 Archivematica Camp, Houston/University of Houston: Training modules | [webpage](https://wiki.archivematica.org/Community/Camps/Houston2018)
 - 2018-11-12 [Archivist's Alley](http://archivistsalley.com/): Ashley Blewer: Digital Archiving, Open Source Work & Systems of Strength| [webpage](http://archivistsalley.com/ashley-blewer-digital-archiving-open-source-work-systems-of-strength/)
 - 2018-10-26 No Time To Wait! 3: The Developer-Archivist: a Definition of the Profession | [video](https://youtu.be/BOTwj7qmMOU?t=9898) | [website](https://mediaarea.net/NoTimeToWait3)
 - 2018-10-17 DLF Forum: Open Options for Audiovisual Preservation | [OSF](https://osf.io/snyfd/) | [slides](https://docs.google.com/presentation/d/1ddQniWhajbqwEpG1F4YS7Q6533mQVlDxVtWxg-diP5g/edit#slide=id.p) | [notes](https://docs.google.com/document/d/1Ug_WsXYLqQRMVeYT6LIcXpVLhQivuBMbkmOVywbMkZ0/edit)
