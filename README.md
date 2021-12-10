@@ -2,7 +2,10 @@ Repository containing all talks I have given, publications I've been involved wi
 
 # 2021
 
-- Took a break!
+- 2020-12-08 CommCon Virtual: Pulling text out of a (mediasoup) hat and other magic tricks for a captivating live transcription performance | [video](https://2021.commcon.xyz/talks/pulling-text-out-of-a-mediasoup-hat-and-other-magic-tricks-for-a-captivating-live-transcription-performance)
+- 2020-11-02 Digital Library Federation Forum: Building a Collaborative Curation Framework: Working Towards Sustainable Digital Stewardship | [program](https://midspace.forum2021.diglib.org/conference/clir-events/item/469d6f91-7e43-487c-99b0-b42de3fc15ab) (Note: I did not speak but authored report)
+
+Took some time off to rest!
 
 # 2020
 
