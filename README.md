@@ -1,11 +1,15 @@
 Repository containing all talks I have given, publications I've been involved with, places I've been interviewed, with links to related materials. Does not include some private institutional trainings. From 2018 onward, some materials are hosted here in this repo. 
 
+# 2022
+
+- 2022-11-01 New York University Moving Image Archiving and Preservation, Video Preservation I: The very most important digital video properties
+ | [slides](https://docs.google.com/presentation/d/1-n01I75-mCMwcQ7XZKm3eKbCDDejdbbTRNaMEnxHoTg/edit#slide=id.p)
+- 2022-10-17 University of Illinois at Urbana-Champaign, Audiovisual Materials in Libraries and Archives (guest lecture)
+
 # 2021
 
 - 2020-12-08 CommCon Virtual: Pulling text out of a (mediasoup) hat and other magic tricks for a captivating live transcription performance | [video](https://2021.commcon.xyz/talks/pulling-text-out-of-a-mediasoup-hat-and-other-magic-tricks-for-a-captivating-live-transcription-performance)
 - 2020-11-02 Digital Library Federation Forum: Building a Collaborative Curation Framework: Working Towards Sustainable Digital Stewardship | [program](https://midspace.forum2021.diglib.org/conference/clir-events/item/469d6f91-7e43-487c-99b0-b42de3fc15ab) (Note: I did not speak but authored report)
-
-Took some time off to rest!
 
 # 2020
 
