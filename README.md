@@ -3,7 +3,7 @@ Repository containing all talks I have given, publications I've been involved wi
 # 2022
 
 - 2022-11-01 New York University Moving Image Archiving and Preservation, Video Preservation I: The very most important digital video properties | [slides](https://docs.google.com/presentation/d/1-n01I75-mCMwcQ7XZKm3eKbCDDejdbbTRNaMEnxHoTg/edit#slide=id.p)
-- 2022-10-17 University of Illinois at Urbana-Champaign, Audiovisual Materials in Libraries and Archives (guest lecture)
+- 2022-10-17 University of Illinois at Urbana-Champaign, Audiovisual Materials in Libraries and Archives | (guest lecture)
 
 # 2021
 
