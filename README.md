@@ -1,5 +1,9 @@
 Repository containing all talks I have given, publications I've been involved with, places I've been interviewed, with links to related materials. Does not include some private institutional trainings. From 2018 onward, some materials are hosted here in this repo. 
 
+
+# 2024
+- 2024-01-30 National Digital Stewardship Alliance Digipres Redux!, "Doing, Learning, Teaching" or "Charts Charts Charts" | [video](https://drive.google.com/file/d/17_3vlwTF30mj6p0PaKBC-pPqHEPAK73u/view?usp=drive_link) | [slides](https://docs.google.com/presentation/d/1eRd7J8FN0uHhRsDR7fWgOOK9QgnFKdMSEjx9ZrRJNqs/edit?usp=drive_link)
+
 # 2023
 - 2023-10-24 New York University Moving Image Archiving and Preservation, Video Preservation I: The very most important digital video properties (updated) | [slides](https://docs.google.com/presentation/d/1-n01I75-mCMwcQ7XZKm3eKbCDDejdbbTRNaMEnxHoTg/edit#slide=id.p)
 
