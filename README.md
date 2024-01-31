@@ -3,7 +3,7 @@ Repository containing all talks I have given, publications I've been involved wi
 
 # 2024
 
-- 2024-01-30 National Digital Stewardship Alliance Digipres Redux!, "Doing, Learning, Teaching" or "Charts Charts Charts" | [video](https://drive.google.com/file/d/17_3vlwTF30mj6p0PaKBC-pPqHEPAK73u/view?usp=drive_link) | [slides](https://docs.google.com/presentation/d/1eRd7J8FN0uHhRsDR7fWgOOK9QgnFKdMSEjx9ZrRJNqs/edit?usp=drive_link)
+- 2024-01-30 National Digital Stewardship Alliance Digipres Redux!, Excellence Awards, "Doing, Learning, Teaching" or "Charts Charts Charts" | [video](https://drive.google.com/file/d/17_3vlwTF30mj6p0PaKBC-pPqHEPAK73u/view?usp=drive_link) | [slides](https://docs.google.com/presentation/d/1eRd7J8FN0uHhRsDR7fWgOOK9QgnFKdMSEjx9ZrRJNqs/edit?usp=drive_link)
 
 # 2023
 
