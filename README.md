@@ -3,6 +3,10 @@ Repository containing all talks I have given, publications I've been involved wi
 
 # 2024
 
+- 2024-12-06 Association of Moving Image Archivists: "Degralescence" 10 Years Later (Roundtable) | [conference video](https://www.youtube.com/playlist?list=PLb-Zj-nXPS3JV5o-64URS8QkTytu4ypJw)
+- 2024-10-29 New York University Moving Image Archiving and Preservation, Video Preservation I: The very most important digital video properties (updated) | [slides](https://docs.google.com/presentation/d/1-n01I75-mCMwcQ7XZKm3eKbCDDejdbbTRNaMEnxHoTg/edit#slide=id.p)
+- 2024-09-19 - 2024-10-10 University of Illinois Urbana-Champaign IS 593 4-Week AV Digitization Workshop | [syllabus](https://docs.google.com/document/d/1xFCU7tO8n1M3W4PoJpuF1NWSI1jSKEAYBwWCCvkIr_c/edit)
+- 2024-09-13 No Time To Wait! 8: The Future of Memory (Roundtable) | [conference video](https://www.youtube.com/playlist?list=PLb-Zj-nXPS3JV5o-64URS8QkTytu4ypJw)
 - 2024-01-30 National Digital Stewardship Alliance Digipres Redux!, Excellence Awards, "Doing, Learning, Teaching" or "Charts Charts Charts" | [video](https://drive.google.com/file/d/17_3vlwTF30mj6p0PaKBC-pPqHEPAK73u/view?usp=drive_link) | [slides](https://docs.google.com/presentation/d/1eRd7J8FN0uHhRsDR7fWgOOK9QgnFKdMSEjx9ZrRJNqs/edit?usp=drive_link)
 
 # 2023
